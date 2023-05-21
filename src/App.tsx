@@ -1,5 +1,5 @@
 import React from 'react';
-import {GridContainer, Tooltip, GridComponent} from "./components";
+import {GridContainer, Tooltip, GridComponent, Spinner} from "./components";
 
 function App() {
     return (
@@ -42,6 +42,16 @@ function App() {
                     <p style={{color: 'red'}}>Hover me too</p>
                 </Tooltip>
             </div>
+            
+            
+            <Spinner/>
+            <Spinner
+                thickness='4px'
+                speed='0.65s'
+                emptyColor='#E2E8F0'
+                color='#3182ce'
+                size="xl"
+            />
 
         </>
 
