@@ -16,14 +16,13 @@
   ],
   "plugins": [
     "react",
-    "react-hooks",
-    "styled-components"
+    "simple-import-sort"
   ],
   "rules": {
     "react-hooks/rules-of-hooks": "warn",
     "react-hooks/exhaustive-deps": "warn",
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
-    "styled-components/no-unused-vars": "error"
+    "styled-components/no-unused-vars": "off"
   }
 }

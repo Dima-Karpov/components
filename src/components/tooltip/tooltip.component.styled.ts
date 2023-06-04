@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const TooltipContainer = styled.div<{
-    position?: 'top' | 'bottom' | 'left' | 'right';
+  position?: 'top' | 'bottom' | 'left' | 'right';
 }>`
   position: relative;
   display: inline-block;
@@ -22,7 +22,7 @@ export const TooltipContainer = styled.div<{
     background-color: #333;
     color: #fff;
     opacity: 0.8;
-    bottom: ${({position}) => (position === 'top' ? '100%' : 'auto')};
+    bottom: ${({ position }) => (position === 'top' ? '100%' : 'auto')};
     top: ${(props) => (props.position === 'bottom' ? '100%' : 'auto')};
     right: ${(props) => (props.position === 'left' ? '100%' : 'auto')};
     left: ${(props) => (props.position === 'right' ? '100%' : 'auto')};

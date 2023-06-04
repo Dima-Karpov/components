@@ -5,3 +5,5 @@ import { SpinnerStyled } from './spinner.component.styled';
 export const Spinner = forwardRef<HTMLDivElement, ISpinnerOptions>((props, ref) => {
   return <SpinnerStyled ref={ref} {...props} />;
 });
+
+Spinner.displayName = 'Spinner';
