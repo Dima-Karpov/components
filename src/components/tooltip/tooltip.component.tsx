@@ -1,18 +1,17 @@
-import {ReactElement, FC} from 'react';
+import {FC, ReactElement} from 'react';
 import {TooltipContainer} from './tooltip.component.styled';
 
 type TooltipProps = {
     text: string;
     position?: 'top' | 'bottom' | 'left' | 'right';
-    children: ReactElement
+    children: ReactElement;
 };
 
-export const Tooltip: FC<TooltipProps> = ({text, position = 'top', children}) => {
+export const Tooltip: FC<TooltipProps> = ({text, position, children}) => {
     return (
-        <TooltipContainer position={position}>
+        <TooltipContainer position={position || 'top'}>
             {children}
             <span>{text}</span>
         </TooltipContainer>
     );
 };
-

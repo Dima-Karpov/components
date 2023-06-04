@@ -1,6 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const TooltipContainer = styled.div<{ position?: 'top' | 'bottom' | 'left' | 'right' }>`
+export const TooltipContainer = styled.div<{
+    position?: 'top' | 'bottom' | 'left' | 'right';
+}>`
   position: relative;
   display: inline-block;
 
@@ -20,10 +22,10 @@ export const TooltipContainer = styled.div<{ position?: 'top' | 'bottom' | 'left
     background-color: #333;
     color: #fff;
     opacity: 0.8;
-    bottom: ${props => props.position === 'top' ? '100%' : 'auto'};
-    top: ${props => props.position === 'bottom' ? '100%' : 'auto'};
-    right: ${props => props.position === 'left' ? '100%' : 'auto'};
-    left: ${props => props.position === 'right' ? '100%' : 'auto'};
-    margin-${props => props.position}: 0.5rem;
+    bottom: ${({position}) => (position === 'top' ? '100%' : 'auto')};
+    top: ${(props) => (props.position === 'bottom' ? '100%' : 'auto')};
+    right: ${(props) => (props.position === 'left' ? '100%' : 'auto')};
+    left: ${(props) => (props.position === 'right' ? '100%' : 'auto')};
+    margin-${(props) => props.position}: 0.5rem;
   }
 `;

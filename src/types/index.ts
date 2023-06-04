@@ -1,1 +1,1 @@
-export * from './systems.types'
+export * from './systems.types';

@@ -1,4 +1,4 @@
-import {ReactNode, FC} from 'react'
+import { ReactNode, FC } from 'react';
 import styled from 'styled-components';
 
 const Grid = styled.div`
@@ -8,10 +8,9 @@ const Grid = styled.div`
 `;
 
 interface GridProps {
-    children: ReactNode;
+  children: ReactNode;
 }
 
 export const GridComponent: FC<GridProps> = ({ children }) => {
-    return <Grid>{children}</Grid>;
+  return <Grid>{children}</Grid>;
 };
-

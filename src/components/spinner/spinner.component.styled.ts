@@ -1,6 +1,6 @@
-import styled, {css, keyframes} from "styled-components";
-import {ISpinnerOptions} from "./model";
-import {SizeType} from "../../types";
+import styled, { css, keyframes } from 'styled-components';
+import { ISpinnerOptions } from './model';
+import { SizeType } from '../../types';
 
 const spin = keyframes`
   0% {
@@ -22,32 +22,37 @@ const setSizeSpinner = (size: SizeType): string => {
     case 'lg':
       return '2rem';
     case 'xl':
-      return '3rem'
-    default: return '1.5rem'
+      return '3rem';
+    default:
+      return '1.5rem';
   }
-}
+};
 type DefaultPropsType = Required<ISpinnerOptions>;
 const defaultProps: DefaultPropsType = {
   color: 'initial',
   thickness: 'initial',
   emptyColor: 'transparent',
   speed: '0.45s',
-  size: 'md'
+  size: 'md',
 };
 
 type SpinnerStyledType = ISpinnerOptions;
 export const SpinnerStyled = styled.div<SpinnerStyledType>`
-    display: inline-block;
-    border-color: currentColor;
-    border-style: solid;
-    border-radius: 99999px;
-  
-    border-width: ${({thickness = defaultProps.thickness}): string => thickness};
-    border-bottom-color: ${({emptyColor = defaultProps.emptyColor}): string => emptyColor};
-    border-left-color: ${({emptyColor  = defaultProps.emptyColor}): string => emptyColor};
-    animation: ${({ speed = defaultProps.speed}) => css`${spin} ${speed} linear infinite`};
-    color: ${({ color = defaultProps.color}): string => color};
-    width: var(--spinner-size);
-    height: var(--spinner-size);
-    --spinner-size: ${({size = defaultProps.size}): string => setSizeSpinner(size)};
+  display: inline-block;
+  border-color: currentColor;
+  border-style: solid;
+  border-radius: 99999px;
+
+  border-width: ${({ thickness = defaultProps.thickness }): string => thickness};
+  border-bottom-color: ${({ emptyColor = defaultProps.emptyColor }): string =>
+    emptyColor};
+  border-left-color: ${({ emptyColor = defaultProps.emptyColor }): string => emptyColor};
+  animation: ${({ speed = defaultProps.speed }) =>
+    css`
+      ${spin} ${speed} linear infinite
+    `};
+  color: ${({ color = defaultProps.color }): string => color};
+  width: var(--spinner-size);
+  height: var(--spinner-size);
+  --spinner-size: ${({ size = defaultProps.size }): string => setSizeSpinner(size)};
 `;
